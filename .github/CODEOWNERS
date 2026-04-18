@@ -1,0 +1,25 @@
+# ──────────────────────────────────────────────────
+# CODEOWNERS — auto-assign reviewers on pull requests
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# ──────────────────────────────────────────────────
+
+# Default owners for everything (fallback)
+*                       @myorg/platform-team
+
+# Infrastructure
+terraform/              @myorg/sre-team
+kubernetes/             @myorg/sre-team
+
+# CI/CD pipelines
+.github/                @myorg/devops-team
+
+# Backend service
+src/backend/            @myorg/backend-team
+
+# Frontend service
+src/frontend/           @myorg/frontend-team
+
+# Security-sensitive files — require security team sign-off
+.github/workflows/      @myorg/security-team @myorg/devops-team
+SECURITY.md             @myorg/security-team
+sonar-project.properties @myorg/security-team
